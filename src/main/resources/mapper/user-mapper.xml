@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="userMapper">
+    <resultMap id="userResultMap" type="com.smzdm.uas.core.entity.User">
+        <id column="user_id" property="userId"/>
+        <result column="user_name" property="userName"/>
+        <result column="user_code" property="userCode"/>
+        <result column="emp_code" property="empCode"/>
+        <result column="status" property="status"/>
+        <result column="realName" property="realName"/>
+        <result column="gender" property="gender"/>
+        <result column="password" property="password"/>
+        <result column="salt" property="salt"/>
+        <result column="login_count" property="loginCount"/>
+        <result column="last_update" property="lastUpdate"/>
+        <result column="last_login" property="lastLogin"/>
+        <result column="mac_code" property="macCode"/>          
+        <result column="ip_addr" property="ipAddr"/>        
+        <result column="email" property="email"/>
+        <result column="phone_no" property="phoneNo"/>
+        <result column="bankcard_no" property="bankcardNo"/>
+        <result column="idcard_no" property="idcardNo"/>    
+        <result column="create_time" property="createTime"/>    
+        <result column="create_user" property="createUser"/>
+        <result column="bind_id" property="bindId"/>
+        <result column="bind_name" property="bindName"/>        
+        <result column="remark" property="remark"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="rem_str1" property="remStr1"/>
+        <result column="rem_str2" property="remStr2"/>
+        <result column="rem_str3" property="remStr3"/>
+        <result column="rem_int1" property="remInt1"/>
+        <result column="rem_int2" property="remInt2"/>      
+        <result column="role_ids" property="roleIds"/>
+        <result column="role_names" property="roleNames"/>        
+    </resultMap>
+
+    <insert id="saveUserGroup" parameterType="com.smzdm.uas.core.entity.UserGroup">
+        INSERT INTO
+            uas_usergroup
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="groupName != null">
+                group_name,
+            </if>
+            <if test="groupCode != null">
+                group_code,
+            </if>
+            <if test="parentGroupId != null">
+                parent_group_id,
+            </if>            
+            <if test="status != null">
+                status,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+            <if test="isDeleted != null">
+                is_deleted,
+            </if>                                                                                                                                             
+        </trim>
+        <trim prefix="values(" suffix=")" suffixOverrides=",">
+            <if test="groupName != null">
+                #{groupName},
+            </if>
+            <if test="groupCode != null">
+                #{groupCode},
+            </if>
+            <if test="parentGroupId != null">
+                #{parentGroupId},
+            </if>            
+            <if test="status != null">
+                #{status},
+            </if>
+            <if test="remark != null">
+                #{remark},
+            </if>
+            <if test="isDeleted != null">
+                #{isDeleted},
+            </if>                                    
+        </trim>
+    </insert>   
+    <update id="updateUserGroup" parameterType="com.smzdm.uas.core.entity.UserGroup">
+        UPDATE
+            uas_usergroup
+        <set>
+            <if test="groupName != null">
+                group_name = #{groupName},
+            </if>
+            <if test="groupCode != null">
+                group_code = #{groupCode},
+            </if>
+            <if test="parentGroupId != null">
+                parent_group_id = #{parentGroupId},
+            </if>            
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="remark != null">
+                remark = #{remark},
+            </if>
+            <if test="isDeleted != null">
+                is_deleted = #{isDeleted},
+            </if>                     
+        </set>
+        WHERE group_id = #{groupId}
+    </update>
+    <select id="queryUserGroup" parameterType="java.util.Map" resultMap="userGroupResultMap">
+        SELECT
+            t.group_id,
+            t.group_name,
+            t.parent_group_id,
+            t.status,
+            t.group_code,
+            t.remark
+        FROM
+            uas_usergroup t
+        WHERE 
+            t.is_deleted = 0
+        <if test="groupName != null">
+            AND t.group_name like '%${groupName}%'
+        </if>
+        ORDER BY t.group_id DESC
+    </select>
+    <!-- 物理删除，暂时停用 -->
+    <delete id="delUserGroup" parameterType="java.lang.String">
+        DELETE FROM
+            uas_usergroup
+        WHERE
+            group_id IN
+        <foreach item="idItem" collection="array" open="(" separator="," close=")">
+            #{idItem}
+        </foreach>
+    </delete>
+    <!-- 新增逻辑删除 -->
+    <update id="delUserGroupLogically" parameterType="java.lang.String">
+		UPDATE uas_usergroup
+		SET is_deleted = 1
+		WHERE
+			group_id IN
+		<foreach item="idItem" collection="array" open="(" separator="," close=")">
+            #{idItem}
+        </foreach>			
+    </update>  
+    <delete id="delUserFromGroup" parameterType="com.smzdm.uas.core.entity.UserAndGroup">
+		DELETE
+		FROM
+			uas_user_usergroup
+		WHERE
+			user_id = #{userId}
+		AND
+			group_id = #{groupId}
+    </delete>
+	<insert id="saveGroupRoles">
+		INSERT INTO uas_usergroup_role (group_id, role_id)
+		VALUES
+	  	<foreach collection="roles" item="item" index="index"
+	  		separator=",">
+	  		( 
+	  			#{item.groupId},
+				#{item.roleId}
+			 )
+	  	</foreach>
+	</insert>
+	<select id="queryRes" parameterType="java.util.Map" resultMap="resResultMap">
+		SELECT
+			<include refid="resColumn"/>
+		FROM
+			uas_res
+		<where>
+			1 = 1
+			<if test="resCode != null">
+				AND res_code = #{resCode}
+			</if>
+			<if test="resType != null">
+				AND res_type = #{resType}
+			</if>
+			<if test="resName != null">
+				AND res_name LIKE '%${resName}%'
+			</if>
+			<if test="treeNodeIds != null">
+				AND res_id IN (${treeNodeIds})
+			</if>
+			AND
+				is_deleted = 0
+		</where>
+		ORDER BY res_id
+	</select>
+	<!-- 查询父节点下的所有子节点 -->
+	<select id="getResChild" parameterType="java.util.HashMap" resultType="string">
+		SELECT 
+			GROUP_CONCAT(res_id) AS "treeNodeIds"
+		FROM 
+			uas_res 
+		WHERE 
+			FIND_IN_SET(parent_res_id,#{nodeIds})>0
+		AND
+			is_deleted = 0
+	</select>
+	<!-- 查询所有子节点下的所有权限 -->
+	<select id="getPermissionIdByResId" parameterType="java.util.Map" resultType="string">
+		SELECT
+			GROUP_CONCAT(up.permission_id) AS "permissionIds"
+		FROM
+			uas_res ur,uas_permission up
+		WHERE
+			1 =1
+		AND 
+			ur.res_id = up.res_id
+		AND 
+			ur.is_deleted = 0
+		AND 
+			up.is_deleted = 0
+		<if test="resIds != null">
+			AND ur.res_id IN (${resIds})
+		</if>
+	</select>
+	
+	<!-- 根据表名、字段和值判断业务主键是否重复 -->
+	<select id="checkExistByTableColumn" parameterType="map" resultType="long">
+		SELECT
+			count(*)
+		FROM
+			uas_${tableName} u
+		WHERE
+			u.${columnName} = #{value}
+		AND 
+			u.is_deleted = 0	
+	</select>
+	<!-- 细粒度，根据资源编码查询对应权限id -->
+	<select id="queryPermissionIdByResCode" resultType="int" parameterType="string">
+		SELECT
+			p.permission_id
+		FROM
+			uas_permission p,
+			uas_res r
+		WHERE
+			p.res_id = r.res_id
+		AND r.res_code = #{resCode}
+	</select>	
+
+    
+
+</mapper>   
