@@ -1,5 +1,4 @@
 # metagross
-Java Code Examples
-handy manual & snippets and more~
+no code !
 
 see wiki for more [https://github.com/LilyBlooper/arcanine/wiki]
