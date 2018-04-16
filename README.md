@@ -1,4 +1,5 @@
-# metagross
+# arcanine
 no code !
+only notes & questions & wiki
 
-see wiki for more [https://github.com/LilyBlooper/arcanine/wiki]
+click here for more [https://github.com/LilyBlooper/arcanine/wiki]
