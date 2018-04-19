@@ -64,6 +64,7 @@ Unit Commands:
 
 
 
+
 #### 3. 跟 service的关系
 
 
@@ -91,3 +92,4 @@ service说白了就是一个包装,具体是哪种init不清楚, 也有自己的
 * [init system comparison](https://wiki.gentoo.org/wiki/Comparison_of_init_systems)
 * [systemd-replaces-init](https://www.tecmint.com/systemd-replaces-init-in-linux/)
 * [defference-between](https://askubuntu.com/questions/903354/difference-between-systemctl-and-service)
+* [如何使用systemctl](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units)
