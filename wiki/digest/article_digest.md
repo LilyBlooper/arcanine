@@ -36,8 +36,3 @@
 * [淘宝内部分享：怎么跳出MySQL的10个大坑](http://www.csdn.net/article/2015-01-16/2823591?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
 * [Redis 该选择哪种持久化配置](http://zheng-ji.info/blog/2016/03/10/gai-xuan-ze-na-chong-redischi-jiu-hua-pei-zhi/)
 
-
-
-
-
-
