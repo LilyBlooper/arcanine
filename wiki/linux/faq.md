@@ -23,4 +23,15 @@
 ```kill``` = kill SIGTERM
 
 
+```batch
+kill -9 8888
+kill -s 9 8888
+
+kill -s HUP
+kill -1 
+```
+
+
+
+
 ### 

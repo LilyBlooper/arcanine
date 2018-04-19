@@ -61,6 +61,29 @@ Unit Commands:
 
 #### 2. 自定义服务?
 
+vi /etc/systemd/system/tomcat-*.service
+
+```batch
+[Unit]  
+Description=Tomcat  
+After=syslog.target network.target remote-fs.target nss-lookup.target  
+  
+[Service]  
+Type=forking  
+User=smzdm
+Group=smzdm  
+Environment="JAVA_HOME=/usr/java/jdk1.7.0_71"  
+  
+PIDFile=/usr/local/tomcat-api/tomcat.pid  
+ExecStart=/usr/local/tomcat-api/bin/startup.sh  
+ExecReload=/bin/kill -s HUP $MAINPID  
+ExecStop=/bin/kill -s QUIT $MAINPID  
+PrivateTmp=true  
+  
+[Install]  
+WantedBy=multi-user.target
+
+```
 
 
 
