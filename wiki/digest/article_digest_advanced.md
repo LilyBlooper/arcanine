@@ -19,6 +19,8 @@ mysql事务、索引，redis/mongodb 应用， http 协议， 多线程、分布
 通过将team分成前后端team，让两边的工程师更加专注各自的领域，独立治理，然后构建出一个全栈式的精益求精的team。
 
 
+* [分布式理论](http://www.infoq.com/cn/news/2018/05/distributed-system-architecture?utm_source=tuicool&utm_medium=referral)
+* [ES 很棒的教程](https://mp.weixin.qq.com/s/FPnt2dzxrvfPrnaDataVOg)
 
 
 * [Spring Cloud VS. Dubbo](http://blog.jobbole.com/109635/)
