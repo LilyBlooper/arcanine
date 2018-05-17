@@ -10,11 +10,13 @@
 - spring / spring mvc 4.3.12
 - mybatis 3.4.5
 - druid 1.0.11
-- fastjson 
-- guava 17.0
+- fastjson 1.2.46 
+- guava 25.0-jre
 - commons-lang3
 - commons-io
 - tbd
 
 
 ### 
+
+- 
