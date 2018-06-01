@@ -1,0 +1,5 @@
+* [systemctl](https://github.com/LilyBlooper/arcanine/blob/master/wiki/linux/systemctl%20%E7%9B%B8%E5%85%B3.md)
+* [可参考](https://zhuanlan.zhihu.com/p/28674639?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
+* [shabby](https://github.com/LilyBlooper/arcanine/blob/master/wiki/linux/%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4.md)
+* [FAQ](https://github.com/LilyBlooper/arcanine/blob/master/wiki/linux/faq.md)
+* [tomcat 自动部署等](https://blog.csdn.net/wh211212/article/details/53770801)
