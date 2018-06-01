@@ -1,5 +1,1 @@
-## 分布式概念
-
-## 分布式框架
-
-## 分布式详情
+![archnote](https://github.com/LilyBlooper/arcanine/blob/master/wiki/architecture/image/ArchNote.png)

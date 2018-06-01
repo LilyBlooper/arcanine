@@ -17,7 +17,6 @@
 * 编程之法：面试和算法心得
 
 
-
 ## 源码学习
 
 * spring 3.2 / 4.+ 
@@ -35,9 +34,9 @@
 * **rabbitmq**
 
 * **dubbo/dubbox**
-* spring cloud
+* spring cloud 
 * **zookeeper**
-* **elastic search** / lucene
+* **elasticsearch** / lucene
 
 * nginx
 * spring boot / spring mvc
