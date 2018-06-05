@@ -23,7 +23,7 @@
 两阶段提交 - 2PC
 nosql等等不支持事务,2pc不适用
 
-CAP原理 -> consistentcy 和 availability 选择其一，一般选c，而a通过最终一致性来满足
+CAP原理 -> consistency 和 availability 选择其一，一般选c，而a通过最终一致性来满足
 
 * 最终一致性：
 可靠事件模式、业务补偿模式、TCC模式
@@ -42,3 +42,6 @@ CAP原理 -> consistentcy 和 availability 选择其一，一般选c，而a通�
 02可重用 - 基础类库、基础设施、基础组件
 03敏捷   - 敏捷开发、CI/CD、DevOps
 04自动化 - 自动化测试、自动化部署、云/容器化
+
+
+### 

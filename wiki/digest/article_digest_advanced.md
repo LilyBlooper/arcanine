@@ -44,3 +44,4 @@ mysql事务、索引，redis/mongodb 应用， http 协议， 多线程、分布
 * [支付宝架构师眼里的高并发架构](https://www.jianshu.com/p/b815532d58fc?utm_source=tuicool&utm_medium=referral)
 * [ FAQ ](https://juejin.im/post/5aae4e8f6fb9a028e52d9e8c)
 * [调度器架构](https://mp.weixin.qq.com/s/MJwJTKXX41Dy-stlVElBDQ)
+* [美团点评 - MQ设计精要](https://tech.meituan.com/mq-design.html)
