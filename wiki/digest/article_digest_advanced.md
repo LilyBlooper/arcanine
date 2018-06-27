@@ -45,6 +45,6 @@ mysql事务、索引，redis/mongodb 应用， http 协议， 多线程、分布
 * [ FAQ ](https://juejin.im/post/5aae4e8f6fb9a028e52d9e8c)
 * [调度器架构](https://mp.weixin.qq.com/s/MJwJTKXX41Dy-stlVElBDQ)
 * [美团点评 - MQ设计精要](https://tech.meituan.com/mq-design.html)
-
+* [Java-Skill-Stack](https://github.com/superhj1987/pragmatic-java-engineer)
 
 * [ZK什么时候用? 阿里巴巴怎么做的?](http://www.infoq.com/cn/articles/why-doesnot-alibaba-use-zookeeper?utm_source=infoq&utm_medium=popular_widget&utm_campaign=popular_content_list&utm_content=homepage)
