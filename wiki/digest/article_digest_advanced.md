@@ -49,3 +49,5 @@ mysql事务、索引，redis/mongodb 应用， http 协议， 多线程、分布
 
 * [ZK什么时候用? 阿里巴巴怎么做的?](http://www.infoq.com/cn/articles/why-doesnot-alibaba-use-zookeeper?utm_source=infoq&utm_medium=popular_widget&utm_campaign=popular_content_list&utm_content=homepage)
 * [微信红包设计](http://www.infoq.com/cn/articles/2017hongbao-weixin)
+
+* [腾讯es实践](https://mp.weixin.qq.com/s/0TMESj2Z-XK2PzwBQo0Mpg)
