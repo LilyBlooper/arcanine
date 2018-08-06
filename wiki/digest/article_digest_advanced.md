@@ -51,3 +51,4 @@ mysql事务、索引，redis/mongodb 应用， http 协议， 多线程、分布
 * [微信红包设计](http://www.infoq.com/cn/articles/2017hongbao-weixin)
 
 * [腾讯es实践](https://mp.weixin.qq.com/s/0TMESj2Z-XK2PzwBQo0Mpg)
+* [面向GC编程](https://coolshell.cn/articles/11541.html)
