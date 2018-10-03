@@ -24,7 +24,7 @@ mysql事务、索引，redis/mongodb 应用， http 协议， 多线程、分布
 * [架构](https://36kr.com/p/5042735.html)
 * [java 性能]（http://www.jiangxinlingdu.com/thought/2018/09/15/linuxsys.html?utm_source=tuicool&utm_medium=referral）
 * [江南白衣-java8性能]()
-
+* [java后端综合](https://juejin.im/post/5ba591386fb9a05cd31eb85f?utm_source=gold_browser_extension)
 * [Spring Cloud VS. Dubbo](http://blog.jobbole.com/109635/)
 * [微服务的基础框架](http://www.infoq.com/cn/articles/basis-frameworkto-implement-micro-service)
 * [前后端分离](http://blog.csdn.net/piantoutongyang/article/details/65446892)
