@@ -56,3 +56,4 @@ mysql事务、索引，redis/mongodb 应用， http 协议， 多线程、分布
 * [面向GC编程](https://coolshell.cn/articles/11541.html)
 * [知乎如何使用redis]（https://zhuanlan.zhihu.com/p/44441938?utm_source=tuicool&utm_medium=referral）
 * [HBase RowKey 设计](http://www.nosqlnotes.com/technotes/hbase/hbase-rowkey/hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
+* [Mysql 在线DDL](https://www.fromdual.com/online-ddl_vs_pt-online-schema-change)
