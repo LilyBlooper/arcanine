@@ -57,3 +57,4 @@ mysql事务、索引，redis/mongodb 应用， http 协议， 多线程、分布
 * [知乎如何使用redis]（https://zhuanlan.zhihu.com/p/44441938?utm_source=tuicool&utm_medium=referral）
 * [HBase RowKey 设计](http://www.nosqlnotes.com/technotes/hbase/hbase-rowkey/hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
 * [Mysql 在线DDL](https://www.fromdual.com/online-ddl_vs_pt-online-schema-change)
+* [云服务设计架构](https://docs.microsoft.com/en-us/previous-versions/msp-n-p/dn568099(v%3dpandp.10))
