@@ -28,7 +28,7 @@
 		<poi.version>3.10-FINAL</poi.version>		
 		
 		<!-- main version  -->
-		<spring.version>3.2.15.RELEASE</spring.version>
+		<spring.version>5.3.18</spring.version>
 		<validator.version>5.2.4.Final</validator.version>
 		<mybatis.version>3.2.8</mybatis.version>
 		<mybatis-spring.version>1.2.2</mybatis-spring.version>
