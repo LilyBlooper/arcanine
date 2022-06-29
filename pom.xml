@@ -25,7 +25,7 @@
 		<guava.version>17.0</guava.version>
 		<fastjson.version>1.2.21</fastjson.version>
 		<freemarker.version>2.3.20</freemarker.version>
-		<poi.version>3.10-FINAL</poi.version>		
+		<poi.version>4.1.1</poi.version>		
 		
 		<!-- main version  -->
 		<spring.version>3.2.15.RELEASE</spring.version>
